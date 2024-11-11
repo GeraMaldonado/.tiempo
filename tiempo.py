@@ -1,7 +1,5 @@
 import time
 from gtts import gTTS
-from playsound import playsound
-#from os import remove
 
 def tiempo():
     horaActual = time.strftime("%I:%M %p")
@@ -12,7 +10,5 @@ def tiempo():
         mensaje = f"Son las {horaActual}"
     tts = gTTS(mensaje, lang='es')
     tts.save('tiempo.mp3')
-    playsound('tiempo.mp3')
-#    remove('tiempo.mp3')
 
 tiempo()
